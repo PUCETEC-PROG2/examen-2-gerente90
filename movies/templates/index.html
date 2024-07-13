@@ -11,13 +11,19 @@
                 <h1 class= 'fs-0'>Movies</h1>
             </div>
             <p class="p-2">Hola, bienvenido. Estas son tus peliculas: </p>
-            <ul class="list-group">
+            <ul class="list-group-item">
                 {% for movie in movies %}
                 <li class="list-group-item">
                     <a href="movie/{{movie.id}}/"> {{movie | capfirst }}</a>
                     <p>{{movie.year}}</p>
-                </li>
                 {%endfor%}
+                </li> 
+                {% comment %} {% for title in titles %}
+                <li class="list-group-item">
+                    <a href="title/{{title.id}}/"> {{title | capfirst }}</a>
+                    <p>{{movie.year}}</p>
+                </li>
+                {%endfor%} {% endcomment %}
             </ul>
         </div>
     </body>

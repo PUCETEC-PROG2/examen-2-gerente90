@@ -11,6 +11,11 @@ def index(request):
     #pokemons = Pokemon.objects.order_by(type)  Esto uso si quiero ordenarlo
     template = loader.get_template('index.html')
     return HttpResponse(template.render({'movies':movies}, request))
+# def index(request):
+#     titles = Movie.objects.all()  #SELECT de Django
+#     #pokemons = Pokemon.objects.order_by(type)  Esto uso si quiero ordenarlo
+#     template = loader.get_template('index.html')
+#     return HttpResponse(template.render({'tiltes':titles}, request))
 
 def display_movie(request, movie_id):
     #Select where id = pokemon_id
